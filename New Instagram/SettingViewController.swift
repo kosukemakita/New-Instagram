@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class SettingViewController: UITabBarController {
+class SettingViewController: UIViewController {
     
     @IBAction func handleLogoutButton(_ sender: Any) {
         // ログアウトする

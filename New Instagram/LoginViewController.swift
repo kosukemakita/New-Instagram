@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class LoginViewController: UITabBarController {
+class LoginViewController: UIViewController {
     // アカウント作成ボタンをタップしたときに呼ばれるメソッド
     @IBAction func handleCreateAccountButton(_ sender: Any) {
         // アカウント作成ボタンをタップしたときに呼ばれるメソッド

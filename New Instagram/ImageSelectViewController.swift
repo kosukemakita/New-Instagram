@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageSelectViewController: UITabBarController {
+class ImageSelectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
