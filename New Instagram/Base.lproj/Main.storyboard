@@ -10,7 +10,7 @@
         <!--投稿-->
         <scene sceneID="fpn-yz-kor">
             <objects>
-                <viewController id="ErZ-wl-xgM" customClass="ImageSelectViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSelect" id="ErZ-wl-xgM" customClass="ImageSelectViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ldx-pO-plX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
         <!--Post View Controller-->
         <scene sceneID="0gF-ig-Trx">
             <objects>
-                <viewController id="uHk-GA-oTC" customClass="PostViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Post" id="uHk-GA-oTC" customClass="PostViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VGG-X6-wHJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
         <!--設定-->
         <scene sceneID="gzI-4d-r9P">
             <objects>
-                <viewController id="KI5-j7-Y1n" customClass="SettingViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Setting" id="KI5-j7-Y1n" customClass="SettingViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9a-NW-RkL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
         <!--ホーム-->
         <scene sceneID="BDw-Mq-0Su">
             <objects>
-                <viewController id="nIU-ef-4xD" customClass="HomeViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="nIU-ef-4xD" customClass="HomeViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDh-bI-JOD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
         <!--Login View Controller-->
         <scene sceneID="pLo-sJ-qU3">
             <objects>
-                <viewController id="DXy-gW-iGW" customClass="LoginViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="DXy-gW-iGW" customClass="LoginViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d72-61-Qlb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,8 +191,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nIU-ef-4xD" kind="relationship" relationship="viewControllers" id="0qM-WE-cPZ"/>
                         <segue destination="ErZ-wl-xgM" kind="relationship" relationship="viewControllers" id="n5l-gE-DCq"/>
+                        <segue destination="nIU-ef-4xD" kind="relationship" relationship="viewControllers" id="0qM-WE-cPZ"/>
                         <segue destination="KI5-j7-Y1n" kind="relationship" relationship="viewControllers" id="Bf8-tj-jNO"/>
                     </connections>
                 </tabBarController>
