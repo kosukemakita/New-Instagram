@@ -11,7 +11,7 @@ import FirebaseUI
 
 class PostTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var PostImageView: UIImageView!
+    @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
