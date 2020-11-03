@@ -191,10 +191,25 @@
                     <view key="view" contentMode="scaleToFill" id="DDh-bI-JOD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Pn-06-gwl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gfd-bg-hPh" firstAttribute="bottom" secondItem="8Pn-06-gwl" secondAttribute="bottom" id="NC8-nz-a8u"/>
+                            <constraint firstItem="Gfd-bg-hPh" firstAttribute="trailing" secondItem="8Pn-06-gwl" secondAttribute="trailing" id="PLh-1F-n0q"/>
+                            <constraint firstItem="8Pn-06-gwl" firstAttribute="top" secondItem="Gfd-bg-hPh" secondAttribute="top" id="Ttj-bv-K8t"/>
+                            <constraint firstItem="8Pn-06-gwl" firstAttribute="leading" secondItem="Gfd-bg-hPh" secondAttribute="leading" id="Ytf-2H-FDR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gfd-bg-hPh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="eW0-Pa-6Ym"/>
+                    <connections>
+                        <outlet property="tableView" destination="8Pn-06-gwl" id="y2b-sx-wgX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5x-eu-W4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +218,7 @@
         <!--Login View Controller-->
         <scene sceneID="pLo-sJ-qU3">
             <objects>
-                <viewController storyboardIdentifier="Login" id="DXy-gW-iGW" customClass="LoginViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" id="DXy-gW-iGW" customClass="LoginViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d72-61-Qlb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,6 +285,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PwW-fY-ip8"/>
                     </view>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="PoR-i7-bDu" id="nNx-iY-A5G"/>
+                        <outlet property="mailAddressTextField" destination="BgY-2y-LZO" id="7Ra-NC-qZq"/>
+                        <outlet property="passwordTextField" destination="Zjb-eo-egR" id="XyD-F4-ffJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CpS-d0-XdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
