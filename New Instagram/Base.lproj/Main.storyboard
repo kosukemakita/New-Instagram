@@ -286,9 +286,9 @@
                         <viewLayoutGuide key="safeArea" id="PwW-fY-ip8"/>
                     </view>
                     <connections>
-                        <outlet property="displayNameTextField" destination="PoR-i7-bDu" id="nNx-iY-A5G"/>
-                        <outlet property="mailAddressTextField" destination="BgY-2y-LZO" id="7Ra-NC-qZq"/>
-                        <outlet property="passwordTextField" destination="Zjb-eo-egR" id="XyD-F4-ffJ"/>
+                        <outlet property="displayNameTextField" destination="BgY-2y-LZO" id="GGj-ng-VQW"/>
+                        <outlet property="mailAddressTextField" destination="PoR-i7-bDu" id="Tqs-FB-9qH"/>
+                        <outlet property="passwordTextField" destination="Zjb-eo-egR" id="vOi-lb-NDC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CpS-d0-XdV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
