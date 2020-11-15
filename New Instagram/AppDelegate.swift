@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+    class AppDelegate: UIResponder, UIApplicationDelegate {
     // SVProgressHUDをXcode11で実行するための環境調整コード
     var window: UIWindow?  // 追加する
 

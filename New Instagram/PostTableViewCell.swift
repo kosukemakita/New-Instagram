@@ -9,13 +9,17 @@
 import UIKit
 import FirebaseUI
 
-class PostTableViewCell: UITableViewCell {
+class PostTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     
+    
+    @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,9 +39,13 @@ class PostTableViewCell: UITableViewCell {
         let imageRef = Storage.storage().reference().child(Const.ImagePath).child(postData.id + ".jpg")
         postImageView.sd_setImage(with: imageRef)
         
+        print("DEBUG_PRINT_NAME: \(postData.name!)")
+        print("DEBUG_PRINT_CAPTION: \(postData.caption!)")
         // キャプションの表示
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
         
+        // コメントの表示
+//        self.commentLabel.text = "\(postData.name!) : \(postData.comment!)"
         // 日時の表示
         self.dateLabel.text = ""
         if let date = postData.date {
@@ -49,6 +57,10 @@ class PostTableViewCell: UITableViewCell {
         // いいね数の表示
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
+        
+        //コメントの表示
+        let commentText = postData.comment
+        commentLabel.text = "\(commentText)"
         
         // いいねボタンの表示
         if postData.isLiked {

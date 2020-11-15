@@ -182,7 +182,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYM-vF-Z0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="812"/>
+            <point key="canvasLocation" x="1658" y="826"/>
+        </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="keZ-qL-7AG">
+            <objects>
+                <viewController storyboardIdentifier="Comment" modalPresentationStyle="fullScreen" id="jp3-gi-uGV" customClass="CommentViewController" customModule="New_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZG5-eW-glb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp4-AX-Fgg">
+                                <rect key="frame" x="57" y="239" width="300" height="40"/>
+                                <state key="normal" title="コメントする" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCommentButton:" destination="jp3-gi-uGV" eventType="touchUpInside" id="jcZ-PP-Jvl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommentAccountName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn6-LB-c4u">
+                                <rect key="frame" x="57" y="124" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="c0c-eM-Lmt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zeK-Nw-5G6">
+                                <rect key="frame" x="57" y="175" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mw4-k7-zL5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zeK-Nw-5G6" firstAttribute="top" secondItem="cn6-LB-c4u" secondAttribute="bottom" constant="30" id="3VJ-3j-KKA"/>
+                            <constraint firstItem="cn6-LB-c4u" firstAttribute="centerX" secondItem="ZG5-eW-glb" secondAttribute="centerX" id="6IG-nC-P6k"/>
+                            <constraint firstItem="rp4-AX-Fgg" firstAttribute="top" secondItem="zeK-Nw-5G6" secondAttribute="bottom" constant="30" id="B08-5N-Lkz"/>
+                            <constraint firstItem="rp4-AX-Fgg" firstAttribute="centerX" secondItem="ZG5-eW-glb" secondAttribute="centerX" id="U9f-0n-gCB"/>
+                            <constraint firstItem="cn6-LB-c4u" firstAttribute="top" secondItem="q4l-lI-sOW" secondAttribute="top" constant="80" id="Vll-Fd-iE3"/>
+                            <constraint firstItem="zeK-Nw-5G6" firstAttribute="centerX" secondItem="ZG5-eW-glb" secondAttribute="centerX" id="ybO-bP-WRc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q4l-lI-sOW"/>
+                    </view>
+                    <connections>
+                        <outlet property="commenterNameLabel" destination="cn6-LB-c4u" id="W5Z-fT-ySL"/>
+                        <outlet property="textField" destination="zeK-Nw-5G6" id="ssN-dH-bVs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRS-ud-rEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532" y="820"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="BDw-Mq-0Su">
