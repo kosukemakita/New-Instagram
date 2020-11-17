@@ -60,8 +60,10 @@ class PostTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         
         //コメントの表示
         let commentText = postData.comment
+//        print("DEBUG_PRINT_COMMENT: \(commentText ?? "comment is nil")")
         commentLabel.text = "\(commentText)"
-        
+//        self.commentLabel.text = commentText  
+    
         // いいねボタンの表示
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")

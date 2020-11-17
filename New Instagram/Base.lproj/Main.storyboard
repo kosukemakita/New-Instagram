@@ -216,6 +216,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m23-qG-Rzr">
+                                <rect key="frame" x="57" y="299" width="300" height="40"/>
+                                <state key="normal" title="戻る" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="jp3-gi-uGV" eventType="touchUpInside" id="Jb0-pK-j9V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -224,6 +231,8 @@
                             <constraint firstItem="rp4-AX-Fgg" firstAttribute="top" secondItem="zeK-Nw-5G6" secondAttribute="bottom" constant="30" id="B08-5N-Lkz"/>
                             <constraint firstItem="rp4-AX-Fgg" firstAttribute="centerX" secondItem="ZG5-eW-glb" secondAttribute="centerX" id="U9f-0n-gCB"/>
                             <constraint firstItem="cn6-LB-c4u" firstAttribute="top" secondItem="q4l-lI-sOW" secondAttribute="top" constant="80" id="Vll-Fd-iE3"/>
+                            <constraint firstItem="m23-qG-Rzr" firstAttribute="top" secondItem="rp4-AX-Fgg" secondAttribute="bottom" constant="20" id="a6D-Q6-mqq"/>
+                            <constraint firstItem="m23-qG-Rzr" firstAttribute="centerX" secondItem="ZG5-eW-glb" secondAttribute="centerX" id="rwm-bc-hM6"/>
                             <constraint firstItem="zeK-Nw-5G6" firstAttribute="centerX" secondItem="ZG5-eW-glb" secondAttribute="centerX" id="ybO-bP-WRc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q4l-lI-sOW"/>

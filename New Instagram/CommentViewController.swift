@@ -13,7 +13,7 @@ import SVProgressHUD
 class CommentViewController: UIViewController {
     // 更新データを作成する
     var postData: PostData!
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,9 +23,11 @@ class CommentViewController: UIViewController {
     @IBOutlet weak var commenterNameLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
-//    var comment = textField.text!
+    @IBAction func handleCancelButton(_ sender: Any) {
+         self.dismiss(animated: true, completion: nil)
+    }
+    //    var comment = textField.text!
     @IBAction func handleCommentButton(_ sender: Any) {
-        
         
         let comment = textField.text!
         // 更新データを作成する
