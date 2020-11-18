@@ -61,6 +61,12 @@ class PostTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         //コメントの表示
         let commentText = postData.comment
 //        print("DEBUG_PRINT_COMMENT: \(commentText ?? "comment is nil")")
+//        
+//        for commentText in foo {
+//            print(commentText)
+//        }
+        
+        
         commentLabel.text = "\(commentText)"
 //        self.commentLabel.text = commentText  
     
