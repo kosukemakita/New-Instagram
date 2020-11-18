@@ -62,13 +62,12 @@ class PostTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         let commentText = postData.comment
 //        print("DEBUG_PRINT_COMMENT: \(commentText ?? "comment is nil")")
 //        
-//        for commentText in foo {
-//            print(commentText)
-//        }
+        for commentIndent in commentText {
+            print("コメント表示テスト: \(commentIndent)")
+            commentLabel.text = "\(commentIndent)"
+        }
         
-        
-        commentLabel.text = "\(commentText)"
-//        self.commentLabel.text = commentText  
+//        commentLabel.text = "\(commentText)"
     
         // いいねボタンの表示
         if postData.isLiked {
