@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseUI
+import Firebase
 
 class PostTableViewCell: UITableViewCell, UINavigationControllerDelegate {
     
@@ -45,7 +46,7 @@ class PostTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
         
         // コメントの表示
-//        self.commentLabel.text = "\(postData.name!) : \(postData.comment!)"
+        //        self.commentLabel.text = "\(postData.name!) : \(postData.comment!)"
         // 日時の表示
         self.dateLabel.text = ""
         if let date = postData.date {
@@ -60,15 +61,27 @@ class PostTableViewCell: UITableViewCell, UINavigationControllerDelegate {
         
         //コメントの表示
         let commentText = postData.comment
-//        print("DEBUG_PRINT_COMMENT: \(commentText ?? "comment is nil")")
-//        
-        for commentIndent in commentText {
-            print("コメント表示テスト: \(commentIndent)")
-            commentLabel.text = "\(commentIndent)"
+        //        print("DEBUG_PRINT_COMMENT: \(commentText ?? "comment is nil")")
+        //
+        var commentLabelText = ""
+        let user = Auth.auth().currentUser
+        if let user = user {
+            if commentLabel.text != nil {
+            for commentIndent in commentText {
+                print("コメント表示テスト: \(commentIndent)")
+//                commentLabel.text = "■\(postData.name!)■ \(commentIndent)"
+                commentLabelText = commentLabelText + "■\(postData.name!)■ \(commentIndent)"  + "\n"
+            }
+                
+            } else {
+                print("コメント表示テスト: コメントなし")
+                commentLabel.text = "コメントなし"
+            }
+            commentLabel.text = commentLabelText
         }
         
-//        commentLabel.text = "\(commentText)"
-    
+        //        commentLabel.text = "\(commentText)"
+        
         // いいねボタンの表示
         if postData.isLiked {
             let buttonImage = UIImage(named: "like_exist")
